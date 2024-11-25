@@ -109,5 +109,5 @@ We will also compare **Logistic Regression** and **GBT** using **traditional met
 ## Conclusion
 This project demonstrates the process of building machine learning models for **flight delay prediction**. The models can be used by airlines and passengers to predict delays and improve operational efficiency. The comparison of various algorithms helps in selecting the best model for deployment.
 
-For more details, explore the **IPython Notebooks (https://www.kaggle.com/code/gunashankars/flight-delay-prediction-project-using-pyspark#Traditional-Logistic-Reg) ** in the repository.
+For more details, explore the **[IPython Notebooks](https://www.kaggle.com/code/gunashankars/flight-delay-prediction-project-using-pyspark#Traditional-Logistic-Reg) ** in the repository.
 ```.
