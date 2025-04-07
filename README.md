@@ -1,11 +1,11 @@
 Here’s the complete project documentation rewritten in markdown format for your GitHub repo:
+# ✈️ Flight Delay Prediction
 
-```markdown
-# Flight Delay Prediction
+This repository provides a comprehensive **Flight Delay Prediction** project that analyzes historical flight data to predict potential delays. The objective is to build and evaluate several predictive models to help passengers and airlines manage disruptions more effectively.
 
-This repository provides a comprehensive **Flight Delay Prediction** project that analyzes historical flight data to predict potential flight delays. The goal is to build and evaluate several predictive models to assist passengers and airlines in managing delays more effectively.
+---
 
-## Table of Contents
+## 📚 Table of Contents
 1. [Project Overview](#project-overview)
 2. [Importing Necessary Packages](#importing-necessary-packages)
 3. [Data Summary and Descriptive Statistics](#data-summary-and-descriptive-statistics)
@@ -16,18 +16,33 @@ This repository provides a comprehensive **Flight Delay Prediction** project tha
    - Gradient Boosting Regressor (GBT)
 6. [Model Evaluation and Comparison](#model-evaluation-and-comparison)
 
-## Project Overview
-This project aims to predict whether a flight will be delayed based on various flight characteristics, including **airport origin**, **route**, **time of day**, and **weather conditions**. The analysis involves data exploration, visualization, and model building, using **PySpark** and **Machine Learning** techniques.
+---
 
-## Importing Necessary Packages
+## 🚀 Project Overview
 
-### Setting Up PySpark Environment
-To get started, we first need to import the necessary packages and set up the **PySpark environment** for distributed processing and large-scale data handling.
+This project predicts whether a flight will be delayed based on various features such as:
+
+- **Airport origin and destination**
+- **Route and carrier**
+- **Time of day and day of the week**
+- **Weather conditions**
+
+The analysis is performed using **PySpark**, which enables distributed data processing, along with **machine learning models** for prediction.
+
+---
+
+## 🔧 Importing Necessary Packages
+
+Before beginning, set up your PySpark environment and import essential libraries:
 
 ```python
 from pyspark.sql import SparkSession
-from pyspark.ml import *
-```
+from pyspark.sql.functions import col, when
+from pyspark.ml.feature import VectorAssembler, StringIndexer
+from pyspark.ml.classification import LogisticRegression, RandomForestClassifier
+from pyspark.ml.regression import RandomForestRegressor, GBTRegressor
+from pyspark.ml.evaluation import BinaryClassificationEvaluator, RegressionEvaluator
+from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
 
 ### PySpark ML Packages
 For building machine learning models, we import **PySpark ML** libraries, which help in handling data transformations, feature engineering, and training models.
